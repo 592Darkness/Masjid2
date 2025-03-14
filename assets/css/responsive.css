@@ -1,0 +1,588 @@
+/**
+ * Responsive styles for Guyana Auto Dealer theme
+ */
+
+/* -----------------------------------------
+Large Desktops (1200px and up)
+----------------------------------------- */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* -----------------------------------------
+Desktops (992px to 1199px)
+----------------------------------------- */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    /* Header */
+    .site-title {
+        font-size: 1.6em;
+    }
+    
+    /* Vehicle Grid */
+    .vehicles-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Products */
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Featured Boxes */
+    .featured-box {
+        width: calc(33.333% - 30px);
+    }
+    
+    /* Hero */
+    .hero-title {
+        font-size: 2.5em;
+    }
+    
+    /* Vehicle Search Form */
+    .quick-search-row {
+        flex-wrap: wrap;
+    }
+    
+    .quick-search-col {
+        width: 33.333%;
+    }
+    
+    .quick-search-submit {
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+/* -----------------------------------------
+Tablets (768px to 991px)
+----------------------------------------- */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Header */
+    .header-top-content {
+        flex-direction: column;
+    }
+    
+    .header-contact-info {
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+    
+    .header-social-icons {
+        text-align: center;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .main-navigation {
+        position: relative;
+    }
+    
+    .main-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 100;
+    }
+    
+    .main-menu.active {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .main-menu li {
+        margin: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .main-menu a {
+        padding: 12px 15px;
+    }
+    
+    .sub-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        max-height: 0;
+        overflow: hidden;
+        background-color: rgba(0,0,0,0.1);
+        transition: max-height 0.3s ease;
+    }
+    
+    .main-menu li:hover > .sub-menu {
+        max-height: 500px;
+    }
+    
+    /* Content Layout */
+    .content-area,
+    .widget-area {
+        width: 100%;
+        float: none;
+    }
+    
+    .widget-area {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+    
+    /* Vehicle Grid */
+    .vehicles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Products */
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Featured Boxes */
+    .featured-boxes {
+        flex-wrap: wrap;
+    }
+    
+    .featured-box {
+        width: calc(50% - 30px);
+        margin-bottom: 30px;
+    }
+    
+    /* Footer */
+    .footer-widgets {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Vehicle Search Form */
+    .vehicle-search-col {
+        width: 50%;
+    }
+    
+    .vehicle-search-actions {
+        text-align: center;
+    }
+    
+    /* Vehicle Single */
+    .vehicle-single-meta {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .vehicle-features-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Hero Section */
+    .hero-content {
+        padding: 60px 0;
+    }
+    
+    .hero-title {
+        font-size: 2.2em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1em;
+    }
+    
+    .quick-search-form {
+        padding: 20px;
+    }
+    
+    .quick-search-col {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+    
+    /* Categories */
+    .categories-wrapper {
+        flex-wrap: wrap;
+    }
+    
+    .category-box {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    
+    /* Makes Grid */
+    .makes-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* WooCommerce */
+    .single-product {
+        flex-direction: column;
+    }
+    
+    .product-gallery,
+    .product-details {
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    .product-gallery {
+        margin-bottom: 30px;
+    }
+    
+    /* Testimonials */
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .testimonial-author-image {
+        margin: 0 auto 15px;
+    }
+}
+
+/* -----------------------------------------
+Mobile Landscape (576px to 767px)
+----------------------------------------- */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    /* Header */
+    .header-contact-info {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .header-contact-info > div {
+        margin: 5px 10px;
+    }
+    
+    .site-branding {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .site-description {
+        margin-top: 5px;
+    }
+    
+    /* Page Header */
+    .page-header {
+        padding: 30px 0;
+    }
+    
+    .page-title {
+        font-size: 2em;
+    }
+    
+    /* Vehicle Grid */
+    .vehicles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Products */
+    .products {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Featured Boxes */
+    .featured-box {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Footer */
+    .footer-widgets {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-nav ul {
+        flex-direction: column;
+    }
+    
+    .footer-nav li {
+        margin: 5px 0;
+    }
+    
+    /* Vehicle Search Form */
+    .vehicle-search-col {
+        width: 100%;
+    }
+    
+    .vehicle-search-actions {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .vehicle-search-reset {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    /* Vehicle Single */
+    .vehicle-single-meta {
+        grid-template-columns: 1fr;
+    }
+    
+    .vehicle-features-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .vehicle-title-price {
+        flex-direction: column;
+    }
+    
+    .vehicle-single-price {
+        margin-top: 10px;
+    }
+    
+    .vehicle-thumbnails {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .vehicle-actions-single {
+        flex-direction: column;
+    }
+    
+    .vehicle-actions-single .btn {
+        margin-right: 0;
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+    }
+    
+    /* Hero Section */
+    .hero-content {
+        padding: 40px 0;
+    }
+    
+    .hero-title {
+        font-size: 2em;
+    }
+    
+    .quick-search-col {
+        width: 100%;
+    }
+    
+    /* Categories */
+    .category-box {
+        width: 100%;
+    }
+    
+    /* Makes Grid */
+    .makes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Forms */
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-col {
+        padding: 0;
+    }
+    
+    /* CTA Section */
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn {
+        margin-bottom: 10px;
+    }
+    
+    /* Inquiry Form */
+    .inquiry-form-container {
+        width: 95%;
+    }
+    
+    /* WooCommerce */
+    .woocommerce-result-count,
+    .woocommerce-ordering {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .woocommerce-ordering {
+        margin-top: 10px;
+    }
+    
+    .cart-actions {
+        flex-direction: column;
+    }
+    
+    .coupon {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .cart-totals {
+        width: 100%;
+    }
+}
+
+/* -----------------------------------------
+Mobile Portrait (575px and down)
+----------------------------------------- */
+@media (max-width: 575px) {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    /* Header */
+    .header-container {
+        flex-direction: column;
+    }
+    
+    .header-actions {
+        margin-top: 15px;
+    }
+    
+    /* Vehicle Gallery */
+    .vehicle-main-image {
+        height: 250px;
+    }
+    
+    .vehicle-thumbnails {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Featured Section */
+    .section-title-main {
+        font-size: 1.8em;
+    }
+    
+    /* Makes Grid */
+    .makes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Hero Banner */
+    .hero-banner {
+        min-height: 300px;
+    }
+    
+    .hero-title {
+        font-size: 1.8em;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9em;
+    }
+    
+    /* WooCommerce */
+    .shop-filter-toggle {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    
+    .shop-filter-content {
+        display: none;
+    }
+    
+    .shop-filter-content.active {
+        display: block;
+    }
+    
+    .shop-filter-wrapper {
+        margin-bottom: 20px;
+    }
+    
+    /* Tables */
+    table.cart td.actions .coupon {
+        float: none;
+        padding-bottom: 1em;
+    }
+    
+    table.cart td.actions .coupon input,
+    table.cart td.actions .coupon .button {
+        width: 100% !important;
+        margin: 0 0 10px !important;
+    }
+    
+    table.cart td.actions .button {
+        width: 100% !important;
+    }
+    
+    /* Cart and Checkout */
+    .woocommerce-cart-form .shop_table .product-thumbnail {
+        display: none;
+    }
+    
+    .woocommerce-cart-form .shop_table .product-remove {
+        width: 20px;
+    }
+    
+    /* Testimonials */
+    .testimonial {
+        padding: 15px;
+    }
+    
+    .testimonial-content p {
+        font-size: 0.9em;
+    }
+    
+    .testimonial-author-image {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* -----------------------------------------
+Small Mobile (375px and down)
+----------------------------------------- */
+@media (max-width: 375px) {
+    /* Typography */
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.7em;
+    }
+    
+    h3 {
+        font-size: 1.5em;
+    }
+    
+    h4 {
+        font-size: 1.3em;
+    }
+    
+    /* Vehicle Info */
+    .vehicle-details-table th,
+    .vehicle-details-table td {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+    
+    /* Header */
+    .site-title {
+        font-size: 1.5em;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+}
